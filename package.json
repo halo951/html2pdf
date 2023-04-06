@@ -1,6 +1,6 @@
 {
     "name": "html2pdf-browser",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Take a screenshot and generate a PDF, solved the problem of SVG rendering and chinese text overlap.",
     "keywords": [
         "html2pdf",
