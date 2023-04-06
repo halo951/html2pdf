@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "types": ["node"],
+        "target": "es5",
+        "lib": ["ESNext", "dom"],
+        "sourceMap": true,
+        "outDir": "dist/lib",
+        "declaration": true,
+        "declarationDir": "typings",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": ["src/**/*.ts", "__tests__/*.ts"]
+}

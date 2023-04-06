@@ -1,0 +1,47 @@
+{
+    "name": "html2pdf-browser",
+    "version": "1.0.0",
+    "description": "Take a screenshot and generate a PDF, solved the problem of SVG rendering and chinese text overlap.",
+    "keywords": [
+        "html2pdf",
+        "html2canvas",
+        "jspdf"
+    ],
+    "license": "MIT",
+    "sideEffects": false,
+    "author": {
+        "name": "halo951",
+        "url": "https://github.com/halo951"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/halo951/html2pdf.git"
+    },
+    "bugs": {
+        "url": "https://github.com/halo951/html2pdf/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.es.js",
+    "typings": "typings/index.d.ts",
+    "scripts": {
+        "clean": "rimraf dist && rimraf typings",
+        "build": "rollup --config ./rollup.config.ts --configPlugin typescript2",
+        "lint:fix": "prettier -w **.ts **.md **.json"
+    },
+    "dependencies": {
+        "html2canvas": "npm:@persagy2/html2canvas@1.4.1-fix.1",
+        "jspdf": "^2.5.1"
+    },
+    "devDependencies": {
+        "@types/node": "^18.15.11",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.70.2",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.31.2",
+        "tslib": "^2.4.0",
+        "typescript": "^4.9.5"
+    }
+}
