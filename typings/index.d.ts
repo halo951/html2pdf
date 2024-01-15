@@ -1,5 +1,6 @@
 import type { jsPDFOptions as IJsPDFOptions } from 'jspdf';
 import type { Options as IHtml2CanvasOptions } from 'html2canvas';
+import JsPDF from 'jspdf';
 /**
  * 将html转化为 canvas
  *
@@ -20,12 +21,16 @@ export declare const html2canvas: (el: HTMLElement, options?: Partial<IHtml2Canv
  *
  * @param filename 下载文件名
  * @param el 需要转化的html节点, 可为数组
- * @param jsPDFOptions jspdf 参数
- * @param html2canvasOptions html2canvas 参数
- *
+ * @param options.downlaod 是否下载
+ * @param options.jsPDFOptions jspdf 参数
+ * @param options.html2canvasOptions html2canvas 参数
  *
  * @returns 转换成功后, 自动触发下载操作
  *
  * @author libin<libin@persagy.com>
  */
-export declare const html2pdf: (filename: string, el: HTMLElement | Array<HTMLElement>, jsPDFOptions?: IJsPDFOptions, html2canvasOptions?: IHtml2CanvasOptions) => Promise<void>;
+export declare const html2pdf: (filename: string, el: HTMLElement | Array<HTMLElement>, options?: {
+    download?: boolean | undefined;
+    jsPDFOptions?: IJsPDFOptions | undefined;
+    html2canvasOptions?: IHtml2CanvasOptions | undefined;
+}) => Promise<void | JsPDF>;
